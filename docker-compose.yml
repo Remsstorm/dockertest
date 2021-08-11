@@ -8,7 +8,7 @@ services:
       MYSQL_ROOT_PASSWORD: wordpress
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_PASSWORD: yourpassword
     volumes:
       - db_data:/var/lib/mysql
   wordpress:
@@ -22,7 +22,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_PASSWORD: yourpassword
       WORDPRESS_DB_NAME: wordpress
     working_dir: /var/www/html
     volumes:
@@ -37,6 +37,6 @@ services:
     restart: always
     environment:
    PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: yourpassword
 volumes:
   db_data:
